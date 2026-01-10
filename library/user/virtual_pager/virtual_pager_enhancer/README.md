@@ -15,7 +15,7 @@ Here, we have the `index.html` file of the web application.
 
 We are going to inject a `<script>` tag that includes our custom payload.
 
-The script retrieves the contents of the `/root/loot` folder by opening another WebSocket connection to `/api/terminal/openWs` and requesting the existing folders.
+The script retrieves the contents of the `/root/loot` folder by sending a request to our own server we host on port 4040.
 
 Downloading specific folders is done using the `/api/files/zip/root/loot/{FOLDER}` endpoint. 
 By default, only the `/api/files/zip/root/loot/handshakes` API is exposed to the web application. However, the custom sidebar menu uses this API endpoint to download any specific loot folder you want.
